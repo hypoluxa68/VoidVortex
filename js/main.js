@@ -6,7 +6,7 @@ var curr_year = new Date().getFullYear();
 window.addEventListener('load', functionInit, true);
 
 function functionInit() {
-
+	makeFooter();
 }
 
 function includeHTML() {
