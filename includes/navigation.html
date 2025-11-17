@@ -1,0 +1,33 @@
+<div class="container-fluid d-flex justify-content-end p-2">
+    <button class="btn btn-secondary rounded-pill text-uppercase py-0 px-4" type="button" data-bs-toggle="modal"
+        data-bs-target="#sign-in-modal">Sign In</button>
+    <div class="modal fade" id="sign-in-modal" tabindex="-1" aria-labelledby="sign-in-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between">
+                    <h2 class="h2 modal-title" id="sign-in-modal-label">Sign In</h2>
+                    <button class="btn" type="button" data-bs-dismiss="modal" aria-label="close">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="w-75 mx-auto" id="sign-in-form" onsubmit="signInUser()">
+                        <div class="form-floating my-2">
+                            <input class="form-control" id="sign-in-name" type="text" autocomplete="username" required>
+                            <label class="form-label" for="sign-in-name">Name <span class="text-danger">*</span></label>
+                        </div>
+                        <div class="form-floating my-2">
+                            <input class="form-control" id="sign-in-password" type="password"
+                                autocomplete="current-password" required>
+                            <label class="form-label" for="sign-in-password">Password <span
+                                    class="text-danger">*</span></label>
+                        </div>
+                        <div class="container-fluid d-flex justify-content-end">
+                            <button class="btn btn-dark rounded-pill text-uppercase px-4" type="submit">Sign In</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
