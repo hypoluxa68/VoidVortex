@@ -33,6 +33,7 @@ main {
 }
 
 #landing main .parallax {
+  background-image: url("https://hypoluxa68.github.io/VoidVortex/stars.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
