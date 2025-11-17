@@ -32,20 +32,6 @@ function includeHTML() {
 	}
 }
 
-function getAppInfo() {
-	const xmlhttp = new XMLHttpRequest();
-	xmlhttp.onload = function () {
-		const app_json = JSON.parse(this.responseText);
-		const app_data = app_json.app_info;
-		const start_year = app_data.start_year;
-		const version = app_data.version;
-		const developer = app_data.developer;
-		makeFooter(developer, version, start_year);
-	};
-	xmlhttp.open('GET', '/docs/app.json', true);
-	xmlhttp.send();
-}
-
 function makeFooter(developer, version, start_year) {
 	if (start_year != curr_year) {
 		$('#copyright').html('<span>&copy; ' + start_year + '-' + curr_year + ' | ' + developer + '</span>');
