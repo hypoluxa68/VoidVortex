@@ -1,3 +1,10 @@
 main {
     min-height: 85vh;
 }
+
+#landing main .parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

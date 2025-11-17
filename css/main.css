@@ -32,6 +32,13 @@ main {
   min-height: 85vh;
 }
 
+#landing main .parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 footer .nav {
   --bs-nav-link-padding-x: 0;
   --bs-nav-link-font-weight: 600;
