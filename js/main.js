@@ -1,12 +1,12 @@
 const version = 'v1.0.0';
-const author = 'me';
+const developer = 'me';
 const start_year = 2025;
 var curr_year = new Date().getFullYear();
 
 window.addEventListener('load', functionInit, true);
 
 function functionInit() {
-	makeFooter();
+	makeFooter(developer, version, start_year);
 }
 
 function includeHTML() {
