@@ -1,12 +1,12 @@
 const version = 'v1.0.0';
-const developer = 'me';
+const author = 'me';
 const start_year = 2025;
 var curr_year = new Date().getFullYear();
 
 window.addEventListener('load', functionInit, true);
 
 function functionInit() {
-	makeFooter(developer, version, start_year);
+	getAppInfo();
 }
 
 function includeHTML() {
@@ -30,6 +30,20 @@ function includeHTML() {
 			return;
 		}
 	}
+}
+
+function getAppInfo() {
+	const xmlhttp = new XMLHttpRequest();
+	xmlhttp.onload = function () {
+		const app_json = JSON.parse(this.responseText);
+		const app_data = app_json.app_info;
+		const start_year = app_data.start_year;
+		const version = app_data.version;
+		const developer = app_data.developer;
+		makeFooter(developer, version, start_year);
+	};
+	xmlhttp.open('GET', 'https://hypoluxa68.github.io/VoidVortex//docs/app.json', true);
+	xmlhttp.send();
 }
 
 function makeFooter(developer, version, start_year) {
